@@ -1,0 +1,40 @@
+# INstruct
+
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix obo:<http://purl.obolibrary.org/obo/> .
+@prefix pint:<http://purl.jp/10/pint/> .
+@prefix xsd:<http://www.w3.org/2001/XMLSchema#> .
+@prefix ins:<http://purl.jp/10/instruct/> .
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix uni:<http://identifiers.org/uniprot/> .
+@prefix pfm:<http://identifiers.org/Pfam/> .
+@prefix bp3:<http://www.biopax.org/release/biopax-level3.owl#> .
+
+
+ins:Q05513-PF00130_Q05513-PF00069
+    bp3:dataSource <http://instruct.yulab.org/> ;
+    bp3:displayName "Q05513-Q05513"^^xsd:string ;
+    bp3:evidence  pint:evidence_pubmed_11078718_ , pint:evidence_pubmed_15665819_ , pint:evidence_pubmed_17203073_ , pint:evidence_pubmed_18650932_ , pint:evidence_pubmed_19920073_ , pint:evidence_pubmed_21900206_ , pint:evidence_pubmed_21911421_ , pint:evidence_pubmed_9748166_ , pint:evidence_pdb_3pfq_false  ;
+    bp3:name "Q05513-Q05513"^^xsd:string ;
+    bp3:participant  [
+        obo:BFO_0000051 uni:Q05513 ;
+        obo:BFO_0000051 pfm:PF00130
+      ] ;
+    bp3:participant [
+        obo:BFO_0000051 uni:Q05513 ;
+        obo:BFO_0000051 pfm:PF00069
+      ] ;
+    a bp3:MolecularInteraction .
+    
+    uni:Q05513
+    pint:proteindomain pfm:PF00130 .
+    
+    uni:Q05513
+    pint:proteindomain pfm:PF00069 .
+
+
+pint:evidence_pubmed_11078718_
+	dcterms:references <http://identifiers.org/pubmed/11078718> ;
+	pint:evidencelevel ""^^xsd:string ;
+  	a bp3:Evidence .
+
